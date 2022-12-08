@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Седона: форма отзыва</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -24,7 +25,7 @@
               <a href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Фото и видео</a>
+              <a href="catalog.html">Фото и видео</a>
             </li>
             <li class="main-nav__item main-nav__item--current">
               <a>Форма отзыва</a>
@@ -38,11 +39,20 @@
         </div>
       </nav>
     </header>
-    <h1 class="visually-hidden">
-      Седона – городок в Аризоне, заслуживающий большего!
-    </h1>
+    <h1 class="visually-hidden">Седона – форма отзыва.</h1>
     <main class="main-container">
-      <!-- Тут будет секция с блоком hero -->
+      <section class="hero">
+        <div class="hero__wrapper">
+          <img
+            class="hero__svg-text"
+            src="./img/sedona-hero-text.svg"
+            alt="Седона."
+            width="229"
+            height="39"
+          />
+          <!-- Тут должен быть белый разделитель -->
+        </div>
+      </section>
       <h2 class="main-container__title">Оставьте свой отзыв</h2>
       <p class="main-container__description">
         Помогите нашим отелям стать лучше! <br />
@@ -120,16 +130,22 @@
               value="good"
               checked
             />
-            <label for="good">Скорее положительное</label>
+            <label class="impression__title" for="good"
+              >Скорее положительное</label
+            >
             <input type="radio" name="impression" id="bad" value="bad" />
-            <label for="bad">Скорее отрицательное</label>
+            <label class="impression__title" for="bad"
+              >Скорее отрицательное</label
+            >
             <input
               type="radio"
               name="impression"
               id="dont-know"
               value="dont-know"
             />
-            <label for="dont-know">Затрудняюсь ответить</label>
+            <label class="impression__title" for="dont-know"
+              >Затрудняюсь ответить</label
+            >
           </fieldset>
           <h3 class="fieldset-title fieldset-title--visited-places">
             Посещенные достопримечательности:
@@ -141,18 +157,26 @@
               name="devil-bridge"
               checked
             />
-            <label for="devil-bridge">Мост Дьявола</label>
+            <label class="visited-places__title" for="devil-bridge"
+              >Мост Дьявола</label
+            >
             <input
               type="checkbox"
               id="bell-mountain"
               name="bell-mountain"
               checked
             />
-            <label for="bell-mountain">Гора-Колокол</label>
+            <label class="visited-places__title" for="bell-mountain"
+              >Гора-Колокол</label
+            >
             <input type="checkbox" id="slide-park" name="slide-park" checked />
-            <label for="slide-park">Слайд-парк</label>
+            <label class="visited-places__title" for="slide-park"
+              >Слайд-парк</label
+            >
             <input type="checkbox" id="red-rocks" name="red-rocks" />
-            <label for="red-rocks">Красные скалы</label>
+            <label class="visited-places__title" for="red-rocks"
+              >Красные скалы</label
+            >
           </fieldset>
           <h3 class="fieldset-title fieldset-title-emotions">
             Опишите свои эмоции:
