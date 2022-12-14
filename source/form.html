@@ -2,7 +2,9 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Седона: форма отзыва</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -24,7 +26,7 @@
               <a href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">Фото и видео</a>
+              <a href="catalog.html">Фото и видео</a>
             </li>
             <li class="main-nav__item main-nav__item--current">
               <a>Форма отзыва</a>
@@ -38,13 +40,22 @@
         </div>
       </nav>
     </header>
-    <h1 class="visually-hidden">
-      Седона – городок в Аризоне, заслуживающий большего!
-    </h1>
-    <main class="main-container">
-      <!-- Тут будет секция с блоком hero -->
-      <h2 class="main-container__title">Оставьте свой отзыв</h2>
-      <p class="main-container__description">
+    <h1 class="visually-hidden">Седона – форма отзыва.</h1>
+    <main class="form-container">
+      <section class="hero">
+        <div class="hero__wrapper">
+          <img
+            class="hero__svg-text"
+            src="./img/sedona-hero-text.svg"
+            alt="Седона."
+            width="229"
+            height="39"
+          />
+          <!-- Тут должен быть белый разделитель -->
+        </div>
+      </section>
+      <h2 class="form-container__title">Оставьте свой отзыв</h2>
+      <p class="form-container__description">
         Помогите нашим отелям стать лучше! <br />
         оставьте отзыв о них, а также о<br />
         посещенных вами<br />
@@ -52,67 +63,65 @@
       </p>
       <section class="review">
         <form class="review__form" action="https://echo.htmlacademy.ru/">
-          <h3 class="fieldset-title fieldset-title--full-name">
-            Представьтесь:
-          </h3>
-          <fieldset class="review__full-name full-name">
-            <label class="full-name__title">
+          <h3 class="review__title review__title--full-name">Представьтесь:</h3>
+          <fieldset class="review__fieldset review__fieldset--full-name">
+            <label class="review__label review__label--full-name">
               Имя*:
               <input
-                class="full-name__input name"
+                class="review__input review__input--full-name"
                 type="text"
                 placeholder="Пётр"
                 name="name"
                 required
               />
             </label>
-            <label class="full-name__title">
+            <label class="review__input review__input--full-name">
               Фамилия*:
               <input
-                class="full-name__input surname"
+                class="review__name review__name--full-name"
                 type="text"
                 placeholder="Пустота"
                 name="surname"
                 required
               />
             </label>
-            <label class="full-name__title">
+            <label class="review__label review__label--full-name">
               Отчество:
               <input
-                class="full-name__input middle-name"
+                class="review__input review__input--full-name"
                 type="text"
                 placeholder="Пустота"
                 name="middle-name"
               />
             </label>
           </fieldset>
-          <h3 class="fieldset-title fieldset-title--contacts">
+          <h3 class="review__title review__title--contacts">
             Контактная информация:
           </h3>
-          <fieldset class="review__contacts contacts">
-            <label class="contacts__title"
+          <fieldset class="review__fieldset review__fieldset--contacts">
+            <label class="review__label review__label--contacts"
               >Контактный телефон*:
               <input
-                class="contacts__input telephone"
+                class="review__input review__input--contacts review__input--tel"
                 type="tel"
                 placeholder="Введите телефон"
                 required
               />
             </label>
-            <label class="contacts__title"
+            <label class="review__label review__label--contacts"
               >Электронная почта*:
               <input
-                class="contacts__input mail"
+                class="review__input review__input--contacts review__input--mail"
                 type="email"
                 placeholder="Введите e-mail"
                 required
               />
             </label>
           </fieldset>
-          <h3 class="fieldset-title fieldset-title-impression">
+          <h3 class="review__title review__title--impression">
             Ваше общее впечатление:
           </h3>
-          <fieldset class="review__impression impression">
+          <fieldset class="review__fieldset review__fieldset--impression">
             <input
               type="radio"
               name="impression"
@@ -120,47 +129,71 @@
               value="good"
               checked
             />
-            <label for="good">Скорее положительное</label>
+            <label class="review__label review__label--impression" for="good"
+              >Скорее положительное</label
+            >
             <input type="radio" name="impression" id="bad" value="bad" />
-            <label for="bad">Скорее отрицательное</label>
+            <label class="review__label review__label--impression" for="bad"
+              >Скорее отрицательное</label
+            >
             <input
               type="radio"
               name="impression"
               id="dont-know"
               value="dont-know"
             />
-            <label for="dont-know">Затрудняюсь ответить</label>
+            <label
+              class="review__label review__label--impression"
+              for="dont-know"
+              >Затрудняюсь ответить</label
+            >
           </fieldset>
-          <h3 class="fieldset-title fieldset-title--visited-places">
+          <h3 class="review__title review__title--visited-places">
             Посещенные достопримечательности:
           </h3>
-          <fieldset class="review__visited-places visited-places">
+          <fieldset class="review__fieldset review__fieldset--visited-places">
             <input
               type="checkbox"
               id="devil-bridge"
               name="devil-bridge"
               checked
             />
-            <label for="devil-bridge">Мост Дьявола</label>
+            <label
+              class="review__label review__label--visited-places"
+              for="devil-bridge"
+              >Мост Дьявола</label
+            >
             <input
               type="checkbox"
               id="bell-mountain"
               name="bell-mountain"
               checked
             />
-            <label for="bell-mountain">Гора-Колокол</label>
+            <label
+              class="review__label review__label--visited-places"
+              for="bell-mountain"
+              >Гора-Колокол</label
+            >
             <input type="checkbox" id="slide-park" name="slide-park" checked />
-            <label for="slide-park">Слайд-парк</label>
+            <label
+              class="review__label review__label--visited-places"
+              for="slide-park"
+              >Слайд-парк</label
+            >
             <input type="checkbox" id="red-rocks" name="red-rocks" />
-            <label for="red-rocks">Красные скалы</label>
+            <label
+              class="review__label review__label--visited-places"
+              for="red-rocks"
+              >Красные скалы</label
+            >
           </fieldset>
-          <h3 class="fieldset-title fieldset-title-emotions">
+          <h3 class="review__title review__title--emotions">
             Опишите свои эмоции:
           </h3>
-          <fieldset class="review__emotions emotions">
+          <fieldset class="review__fieldset review__fieldset--emotions">
             <!-- rows у textarea временный -->
             <textarea
-              class="emotions__text"
+              class="review__textarea"
               rows="5"
               id="comment"
               name="comment"
