@@ -1,5 +1,6 @@
 .page {
   height: 100%;
+  // width: 400px;
   font-size: 14px;
   font-family: "PT Sans", "Arial", sans-serif;
   line-height: 21px;
@@ -7,7 +8,14 @@
 
 .page__body {
   min-height: 100%;
-  margin: 0;
+  width: 320px;
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+  margin: 0 auto;
   background-color: #ffffff;
   color: #000000;
 }

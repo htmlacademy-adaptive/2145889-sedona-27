@@ -6,4 +6,29 @@
   background-image: url("../../img/sedona-intro.png");
   background-repeat: no-repeat;
   min-height: 158px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 52px;
+  padding-bottom: 68px;
+  @media (min-width: @tablet-width) {
+    padding-top: 96px;
+    padding-bottom: 118px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-top: 102px;
+    padding-bottom: 120px;
+  }
+}
+
+.hero__svg-text {
+  @media (min-width: @tablet-width) {
+    width: 457px;
+    height: 78px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 460px;
+    height: 80px;
+  }
 }

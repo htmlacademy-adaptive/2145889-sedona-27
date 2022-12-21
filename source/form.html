@@ -21,13 +21,15 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
+          <ul class="main-nav__site-list">
             <li class="main-nav__item">
               <a href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
               <a href="catalog.html">Фото и видео</a>
             </li>
+          </ul>
+          <ul class="main-nav__user-list">
             <li class="main-nav__item main-nav__item--current">
               <a>Форма отзыва</a>
             </li>
@@ -41,7 +43,7 @@
       </nav>
     </header>
     <h1 class="visually-hidden">Седона – форма отзыва.</h1>
-    <main class="form-container">
+    <main class="main-container">
       <section class="hero">
         <div class="hero__wrapper">
           <img
@@ -54,17 +56,21 @@
           <!-- Тут должен быть белый разделитель -->
         </div>
       </section>
-      <h2 class="form-container__title">Оставьте свой отзыв</h2>
-      <p class="form-container__description">
-        Помогите нашим отелям стать лучше! <br />
-        оставьте отзыв о них, а также о<br />
-        посещенных вами<br />
-        достопримечательностях
-      </p>
+      <div class="page-intro__wrapper">
+        <h2 class="page-intro__title">Оставьте свой отзыв</h2>
+        <p class="page-intro__slogan">
+          Помогите нашим отелям стать лучше! <br />
+          оставьте отзыв о них, а также о<br />
+          посещенных вами<br />
+          достопримечательностях
+        </p>
+      </div>
       <section class="review">
         <form class="review__form" action="https://echo.htmlacademy.ru/">
-          <h3 class="review__title review__title--full-name">Представьтесь:</h3>
           <fieldset class="review__fieldset review__fieldset--full-name">
+            <h3 class="review__title review__title--full-name">
+              Представьтесь:
+            </h3>
             <label class="review__label review__label--full-name">
               Имя*:
               <input
@@ -95,10 +101,10 @@
               />
             </label>
           </fieldset>
-          <h3 class="review__title review__title--contacts">
-            Контактная информация:
-          </h3>
           <fieldset class="review__fieldset review__fieldset--contacts">
+            <h3 class="review__title review__title--contacts">
+              Контактная информация:
+            </h3>
             <label class="review__label review__label--contacts"
               >Контактный телефон*:
               <input
@@ -118,10 +124,10 @@
               />
             </label>
           </fieldset>
-          <h3 class="review__title review__title--impression">
-            Ваше общее впечатление:
-          </h3>
           <fieldset class="review__fieldset review__fieldset--impression">
+            <h3 class="review__title review__title--impression">
+              Ваше общее впечатление:
+            </h3>
             <input
               type="radio"
               name="impression"
@@ -148,10 +154,10 @@
               >Затрудняюсь ответить</label
             >
           </fieldset>
-          <h3 class="review__title review__title--visited-places">
-            Посещенные достопримечательности:
-          </h3>
           <fieldset class="review__fieldset review__fieldset--visited-places">
+            <h3 class="review__title review__title--visited-places">
+              Посещенные достопримечательности:
+            </h3>
             <input
               type="checkbox"
               id="devil-bridge"
@@ -187,10 +193,10 @@
               >Красные скалы</label
             >
           </fieldset>
-          <h3 class="review__title review__title--emotions">
-            Опишите свои эмоции:
-          </h3>
           <fieldset class="review__fieldset review__fieldset--emotions">
+            <h3 class="review__title review__title--emotions">
+              Опишите свои эмоции:
+            </h3>
             <!-- rows у textarea временный -->
             <textarea
               class="review__textarea"

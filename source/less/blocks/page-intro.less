@@ -5,10 +5,29 @@
 .page-intro__wrapper {
   background-image: url("../../img/sedona-intro.png");
   background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+}
+
+// svg картинки меняются в раземерах зависимости от устройства,
+//надо будет поменять
+.page-intro__image {
+  align-self: center;
+  padding-top: 90px;
+  padding-bottom: 118px;
+  @media (min-width: @tablet-width) {
+    padding-top: 78px;
+    padding-bottom: 138px;
+  }
+  @media (min-width: @tablet-width) {
+    padding-bottom: 149px;
+  }
 }
 
 .page-intro__title {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   font-size: 18px;
   line-height: 26px;
@@ -17,7 +36,7 @@
 }
 
 .page-intro__slogan {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   text-transform: uppercase;
 }
