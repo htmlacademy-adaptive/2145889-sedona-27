@@ -6,7 +6,7 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     position: relative;
-    height: 56px;
+    min-height: 56px;
   }
 }
 
@@ -18,10 +18,11 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     width: 185px;
-    left: 292px;
+    left: 50%;
+    transform: translateX(-50%);
   }
+}
 
-  @media (min-width: @desktop-width) {
-    left: 507px;
-  }
+.main-header__logo--secondary {
+  cursor: pointer;
 }

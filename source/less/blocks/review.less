@@ -1,6 +1,5 @@
 .review__form {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   padding: 24px 20px 24px 20px;
@@ -8,12 +7,11 @@
   @media (min-width: @tablet-width) {
     padding: 102px 60px 64px 60px;
     display: grid;
-    grid-template-columns: 324px 324px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: @desktop-width) {
     padding: 67px 120px 64px 120px;
-    grid-template-columns: 480px 480px;
   }
 }
 

@@ -1,17 +1,24 @@
-//Паддинги временные, для мобильной версии
 .hotel-search {
   text-transform: uppercase;
   text-align: center;
-  padding: 38px 29px 49px 29px;
+  max-width: 284px;
+  margin: 0 auto;
+  margin-top: 38px;
+  margin-bottom: 49px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
-    padding: 61px 155px 58px 155px;
+    max-width: 458px;
+    margin-top: 61px;
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 66px;
   }
 }
-//padding-bottom у заголовка временный
+
 .hotel-search__title {
   margin: 0;
   padding: 0;
@@ -32,8 +39,8 @@
     font-size: 14px;
     line-height: 21px;
     padding-bottom: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
 

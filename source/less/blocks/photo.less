@@ -40,8 +40,6 @@
   }
 }
 
-//Вадим, нужно ли создавать новые файлы.less
-// для блоков catalog и card?
 .photo__catalog {
   padding-top: 24px;
 }
@@ -60,14 +58,14 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 324px 324px;
+    grid-template-columns: repeat(2, 1fr);
     padding-left: 60px;
     padding-right: 60px;
     padding-bottom: 58px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 400px 400px 400px;
+    grid-template-columns: repeat(3, 1fr);
     padding-bottom: 62px;
   }
 }

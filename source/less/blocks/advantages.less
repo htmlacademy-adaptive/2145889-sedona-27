@@ -6,11 +6,7 @@
   grid-template-columns: 320px;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 256px 256px 256px;
-  }
-
-  @media (min-width: @desktop-width) {
-    grid-template-columns: 400px 400px 400px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -18,9 +14,7 @@
   margin: 0;
   text-transform: uppercase;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  // width: 284px;
   padding: 54px 18px 40px 18px;
 }
 
@@ -38,7 +32,6 @@
 }
 
 .advantages__item:nth-child(5) {
-  // order: 0;
   @media (min-width: @tablet-width) {
     grid-column: 1/3;
     grid-row: 3/4;
@@ -73,5 +66,5 @@
 }
 
 .advantages__item--secondary {
-  background-color: #eeeeee;
+  background-color: @advantages-secondary;
 }

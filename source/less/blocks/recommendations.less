@@ -11,30 +11,21 @@
   margin: 0;
   padding: 23px 18px 46px 18px;
   list-style-type: none;
-  // display: grid;
-  // grid-template-columns: 284px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 25px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: inherit;
     display: grid;
-    grid-template-columns: 256px 256px 256px;
+    grid-template-columns: repeat(3, 1fr);
     padding: 0;
     gap: 0;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1200px;
-    grid-template-columns: 400px 400px 400px;
-  }
-}
-
-.recommendations__item {
-  @media (min-width: @tablet-width) {
-    // padding-left: 33px;
+    width: inherit;
   }
 }
 
