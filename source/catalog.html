@@ -8,7 +8,7 @@
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo">
+      <a class="main-header__logo main-header__logo--secondary" href="index.html">
         <img
           src="img/sedona-logo-mobile.svg"
           width="185"
@@ -21,13 +21,15 @@
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
+          <ul class="main-nav__site-list">
             <li class="main-nav__item">
               <a href="index.html">Главная</a>
             </li>
             <li class="main-nav__item main-nav__item--current">
-              <a href="catalog.html">Фото и видео</a>
+              <a>Фото и видео</a>
             </li>
+          </ul>
+          <ul class="main-nav__user-list">
             <li class="main-nav__item">
               <a href="form.html">Форма отзыва</a>
             </li>
@@ -62,7 +64,7 @@
             из-за курса? Фотографии помогут вам<br />
             забыть о политике и экономике.
           </p>
-          <div class="photo-catalog catalog">
+          <div class="photo__catalog catalog">
             <!-- Надо будет обрезать фотографии -->
             <ul class="catalog__list">
               <li class="catalog__card card">
@@ -131,12 +133,13 @@
       </section>
       <section class="video">
         <div class="video__wrapper">
+        <div class="video__text-wrapper">
           <h2 class="video__title">Все еще сомневаетесь?</h2>
           <p class="video__description">
-            Смотрите видеопрезентацию и<br />
-            скорее за билетами, пока они не<br />
+            Смотрите видеопрезентацию и скорее за билетами, пока они не
             подорожали в очередной раз!
           </p>
+        </div>
           <!-- Тут img временный, надо будет вставить видео (надо ли будет?) -->
           <img
             class="video__presentation"
