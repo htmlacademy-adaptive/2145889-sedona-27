@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px 20px 24px 20px;
+  padding: 24px 0 24px 0;
 
   @media (min-width: @tablet-width) {
     padding: 102px 60px 64px 60px;
@@ -17,6 +17,150 @@
 
 .review__fieldset {
   text-align: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  position: relative;
+  padding-top: 24px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #e5e5e5;
+
+    @media (min-width: @tablet-width) {
+      height: 0;
+    }
+  }
+}
+
+//Убирает разделитель у последнего fieldset'a
+.review__fieldset--emotions::after {
+  height: 0;
+}
+
+.review__fieldset--full-name {
+  padding-bottom: 39px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    right: 0;
+    // left: 0;
+    top: 0;
+    background-color: #e5e5e5;
+
+    @media (min-width: @tablet-width) {
+      height: 100%;
+      width: 1px;
+    }
+  }
+}
+
+.review__fieldset--contacts {
+  padding-bottom: 34px;
+}
+
+.review__fieldset--impression {
+  padding-bottom: 24px;
+}
+
+.review__title--impression,
+.review__title--visited-places,
+.review__title--emotions {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 123px;
+      top: 50%;
+      bottom: 50%;
+      background-color: #e5e5e5;
+
+      @media (min-width: @desktop-width) {
+        width: 280px;
+      }
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+}
+
+.review__fieldset--visited-places {
+  padding-bottom: 24px;
+}
+
+.review__fieldset--emotions {
+  padding-bottom: 24px;
+}
+
+.review__textarea {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: #f2f2f2;
+  width: 280px;
+  height: 150px;
+
+  &::placeholder {
+    padding: 16px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: fade(#000000, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    height: 160px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 768px;
+  }
+}
+
+.review__impression-input-wrapper,
+.review__visited-places-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  align-items: flex-start;
+  gap: 36px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.review__visited-places-input-wrapper {
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .review__fieldset:nth-child(n + 3) {
@@ -30,27 +174,115 @@
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 28px;
+  }
 }
 
-.review__label--full-name {
+.review__label {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+.review__label--full-name,
+.review__label--contacts {
   text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  text-indent: 16px;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.review__input--full-name {
+  @media (min-width: @tablet-width) {
+    margin-right: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 43px;
+  }
 }
 
 .review__label--contacts {
-  text-transform: uppercase;
+  @media (min-width: @tablet-width) {
+    margin-left: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 43px;
+  }
 }
 
-.review__label--impression {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-}
-
+.review__label--impression,
 .review__label--visited-places {
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
 }
+
+.review__label--impression input,
+.review__label--visited-places input {
+  margin: 0;
+  padding: 0;
+}
+
+.review__input {
+  background-color: #f2f2f2;
+  border: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 16px;
+}
+
+.review__input-label {
+  margin-left: 16px + 23px;
+}
+
+.review__control-mark {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  left: 0;
+  bottom: -10px;
+}
+
+.review__label [type="radio"] + .review__control-mark {
+  border-radius: 50%;
+}
+
+.review__label [type="radio"]:checked + .review__control-mark::after {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  left: 15px;
+  top: 15px;
+  background-color: #333333;
+  content: "";
+}
+
+//Надо будет вместо кругов сделать чтобы свг выводилось
+.review__label [type="checkbox"]:checked + .review__control-mark::after {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  left: 15px;
+  top: 15px;
+  background-color: #333333;
+  content: "";
+}
+
 
 .review__button {
   padding: 16px 49px;
