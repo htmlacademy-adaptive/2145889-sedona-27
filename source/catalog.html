@@ -16,7 +16,7 @@
           alt="Логотип Седоны."
         />
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -58,74 +58,127 @@
       </section>
       <section class="photo">
         <div class="photo__wrapper">
-          <h2 class="photo__title">Фото и видео</h2>
-          <p class="photo__description">
-            Не можете решиться на путешествие<br />
-            из-за курса? Фотографии помогут вам<br />
-            забыть о политике и экономике.
+          <div class="photo__text-wrapper">
+            <h2 class="photo__title">Фото и видео</h2>
+            <p class="photo__description">
+              Не можете решиться на путешествие
+              из-за курса?<br> Фотографии помогут вам
+              забыть о политике и экономике.
           </p>
+          </div>
           <div class="photo__catalog catalog">
-            <!-- Надо будет обрезать фотографии -->
             <ul class="catalog__list">
               <li class="catalog__card card">
-                <img
-                  class="card__photo"
-                  src="./img/sunny-road.jfif"
-                  alt="Дорога на закате."
-                />
-                <h3 class="card__title">Неродные просторы</h3>
-                <p class="card__author">Автор фото: Борис</p>
-                <p class="card__likes likes">
-                  <button class="likes__button button" type="button">
-                    Нравится
-                  </button>
-                  1350
-                </p>
+                <picture>
+                  <source media="(min-width: 1200px)"
+                  srcset="./img/sunny-road-desktop.jpg 1x,
+                  ./img/sunny-road-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                  srcset="./img/sunny-road-tablet.jpg 1x,
+                  ./img/sunny-road-tablet@2x.jpg 2x">
+                  <img
+                    class="card__photo"
+                    src="./img/sunny-road-mobile.jpg"
+                    srcset="./img/sunny-road-mobile@2x.jpg 2x"
+                    alt="Дорога на закате."
+                  />
+                </picture>
+                <div class="card__info-wrapper">
+                  <div class="card__text-wrapper">
+                    <h3 class="card__title">Неродные просторы</h3>
+                    <p class="card__author">Автор фото: Борис</p>
+                  </div>
+                  <p class="card__likes likes">
+                    <button class="likes__button button" type="button">
+                      <p class="visually-hidden">Нравится</p>
+                    </button>
+                    1350
+                  </p>
+                </div>
               </li>
               <li class="catalog__card card">
-                <img
-                  class="card__photo"
-                  src="./img/sedona-flora.jfif"
-                  alt="Аризонский кактус."
+                <picture>
+                  <source media="(min-width: 1200px)"
+                  srcset="./img/sedona-flora-desktop.jpg 1x,
+                  ./img/sedona-flora-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                  srcset="./img/sedona-flora-tablet.jpg 1x,
+                  ./img/sedona-flora-tablet@2x.jpg 2x">
+                  <img
+                    class="card__photo"
+                    src="./img/sedona-flora-mobile.jpg"
+                    srcset="./img/sedona-flora-mobile@2x.jpg 2x"
+                    alt="Аризонский кактус."
                 />
-                <h3 class="card__title">Местная растительность</h3>
-                <p class="card__author">Автор фото: Сергей</p>
-                <p class="card__likes likes">
+                </picture>
+                <div class="card__info-wrapper">
+                  <div class="card__text-wrapper">
+                    <h3 class="card__title">Местная растительность</h3>
+                    <p class="card__author">Автор фото: Сергей</p>
+                  </div>
+                  <p class="card__likes likes">
                   <button class="likes__button button" type="button">
-                    Нравится
+                    <p class="visually-hidden">Нравится</p>
                   </button>
                   143
-                </p>
+                  </p>
+                </div>
               </li>
               <li class="catalog__card card">
-                <img
-                  class="card__photo"
-                  src="./img/north-road.jfif"
-                  alt="Дорога среди деревьев."
-                />
-                <h3 class="card__title">Дорога на Север</h3>
-                <p class="card__author">Автор фото: Петр</p>
-                <p class="card__likes likes">
-                  <button class="likes__button button" type="button">
-                    Нравится
-                  </button>
-                  96
-                </p>
+                <picture>
+                  <source media="(min-width: 1200px)"
+                  srcset="./img/north-road-desktop.jpg 1x,
+                  ./img/north-road-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                  srcset="./img/north-road-tablet.jpg 1x,
+                  ./img/north-road-tablet@2x.jpg 2x">
+                  <img
+                    class="card__photo"
+                    src="./img/north-road-mobile.jpg"
+                    srcset="./img/north-road-mobile@2x.jpg 2x"
+                    alt="Дорога среди деревьев."
+                  />
+                </picture>
+                <div class="card__info-wrapper">
+                  <div class="card__text-wrapper">
+                    <h3 class="card__title">Дорога на Север</h3>
+                    <p class="card__author">Автор фото: Петр</p>
+                  </div>
+                  <p class="card__likes likes">
+                    <button class="likes__button button" type="button">
+                      <p class="visually-hidden">Нравится</p>
+                    </button>
+                    96
+                  </p>
+                </div>
               </li>
               <li class="catalog__card card">
-                <img
-                  class="card__photo"
-                  src="./img/devil-bridge-catalog.jfif"
-                  alt="Каньон."
+                <picture>
+                  <source media="(min-width: 1200px)"
+                  srcset="./img/catalog-bridge-desktop.jpg 1x,
+                  ./img/catalog-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                  srcset="./img/catalog-bridge-tablet.jpg 1x,
+                  ./img/catalog-bridge-tablet@2x.jpg 2x">
+                  <img
+                    class="card__photo"
+                    src="./img/catalog-bridge-mobile.jpg"
+                    srcset="./img/catalog-bridge-mobile@2x.jpg 2x"
+                    alt="Каньон."
                 />
-                <h3 class="card__title">Мост Дьявола</h3>
-                <p class="card__author">Автор фото: Антон</p>
-                <p class="card__likes likes">
-                  <button class="likes__button button" type="button">
-                    Нравится
-                  </button>
-                  254
-                </p>
+                </picture>
+                <div class="card__info-wrapper">
+                  <div class="card__text-wrapper">
+                    <h3 class="card__title">Мост Дьявола</h3>
+                    <p class="card__author">Автор фото: Антон</p>
+                  </div>
+                  <p class="card__likes likes">
+                    <button class="likes__button button" type="button">
+                      <p class="visually-hidden">Нравится</p>
+                    </button>
+                    254
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
@@ -140,12 +193,20 @@
             подорожали в очередной раз!
           </p>
         </div>
-          <!-- Тут img временный, надо будет вставить видео (надо ли будет?) -->
-          <img
-            class="video__presentation"
-            src="./img/video-cover.jfif"
-            alt="Видеопрезентация."
+          <picture>
+            <source media="(min-width: 1200px)"
+            srcset="./img/video-desktop.jpg 1x,
+            ./img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+            srcset="./img/video-tablet.jpg 1x,
+            ./img/video-tablet@2x.jpg 2x">
+            <img
+              class="card__photo"
+              src="./img/video-mobile.jpg"
+              srcset="./img/video-mobile@2x.jpg 2x"
+              alt="Видеопрезентация."
           />
+          </picture>
         </div>
       </section>
     </main>
@@ -202,5 +263,7 @@
         </a>
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

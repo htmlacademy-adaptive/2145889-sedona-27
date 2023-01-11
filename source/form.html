@@ -16,7 +16,7 @@
           alt="Логотип Седоны."
         />
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -56,7 +56,7 @@
           <!-- Тут должен быть белый разделитель -->
         </div>
       </section>
-      <div class="page-intro__wrapper">
+      <div class="page-intro__text-wrapper">
         <h2 class="page-intro__title">Оставьте свой отзыв</h2>
         <p class="page-intro__slogan">
           Помогите нашим отелям стать лучше! <br />
@@ -81,10 +81,10 @@
                 required
               />
             </label>
-            <label class="review__input review__input--full-name">
+            <label class="review__label review__label--full-name">
               Фамилия*:
               <input
-                class="review__name review__name--full-name"
+                class="review__input review__input--full-name"
                 type="text"
                 placeholder="Пустота"
                 name="surname"
@@ -128,70 +128,82 @@
             <h3 class="review__title review__title--impression">
               Ваше общее впечатление:
             </h3>
-            <input
-              type="radio"
-              name="impression"
-              id="good"
-              value="good"
-              checked
-            />
-            <label class="review__label review__label--impression" for="good"
-              >Скорее положительное</label
-            >
-            <input type="radio" name="impression" id="bad" value="bad" />
-            <label class="review__label review__label--impression" for="bad"
-              >Скорее отрицательное</label
-            >
-            <input
-              type="radio"
-              name="impression"
-              id="dont-know"
-              value="dont-know"
-            />
-            <label
+            <div class="review__impression-input-wrapper">
+              <label class="review__label review__label--impression" for="good">
+                <input
+                class="visually-hidden"
+                type="radio"
+                name="impression"
+                id="good"
+                value="good"
+                checked
+                />
+                <span class="review__control-mark review__control-mark--radio"></span>
+                <span class="review__input-label">Скорее положительное </span>
+              </label>
+              <label class="review__label review__label--impression" for="bad">
+                <input class="visually-hidden" type="radio" name="impression" id="bad" value="bad" />
+                <span class="review__control-mark review__control-mark--radio"></span>
+                <span class="review__input-label">Скорее отрицательное </span>
+              </label>
+              <label
               class="review__label review__label--impression"
-              for="dont-know"
-              >Затрудняюсь ответить</label
-            >
+              for="dont-know">
+                <input
+                class="visually-hidden"
+                type="radio"
+                name="impression"
+                id="dont-know"
+                value="dont-know"/>
+                <span class="review__control-mark review__control-mark--radio"></span>
+                <span class="review__input-label">Затрудняюсь ответить </span>
+              </label>
+            </div>
           </fieldset>
           <fieldset class="review__fieldset review__fieldset--visited-places">
             <h3 class="review__title review__title--visited-places">
-              Посещенные достопримечательности:
+              Посещенные<br> достопримечательности:
             </h3>
-            <input
-              type="checkbox"
-              id="devil-bridge"
-              name="devil-bridge"
-              checked
-            />
-            <label
+            <div class="review__visited-places-input-wrapper">
+              <label
               class="review__label review__label--visited-places"
-              for="devil-bridge"
-              >Мост Дьявола</label
-            >
-            <input
-              type="checkbox"
-              id="bell-mountain"
-              name="bell-mountain"
-              checked
-            />
-            <label
+              for="devil-bridge">
+                <input
+                class="visually-hidden"
+                type="checkbox"
+                id="devil-bridge"
+                name="devil-bridge"
+                checked/>
+                <span class="review__control-mark review__control-mark--checkbox"></span>
+                <span class="review__input-label">Мост Дьявола </span>
+              </label>
+              <label
               class="review__label review__label--visited-places"
-              for="bell-mountain"
-              >Гора-Колокол</label
-            >
-            <input type="checkbox" id="slide-park" name="slide-park" checked />
-            <label
+              for="bell-mountain">
+                <input
+                class="visually-hidden"
+                type="checkbox"
+                id="bell-mountain"
+                name="bell-mountain"
+                checked/>
+                <span class="review__control-mark review__control-mark--checkbox"></span>
+                <span class="review__input-label">Гора-Колокол </span>
+              </label>
+              <label
               class="review__label review__label--visited-places"
-              for="slide-park"
-              >Слайд-парк</label
-            >
-            <input type="checkbox" id="red-rocks" name="red-rocks" />
-            <label
+              for="slide-park">
+                <input class="visually-hidden" type="checkbox" id="slide-park" name="slide-park" checked />
+                <span class="review__control-mark review__control-mark--checkbox"></span>
+                <span class="review__input-label">Слайд-парк </span>
+              </label>
+              <label
               class="review__label review__label--visited-places"
-              for="red-rocks"
-              >Красные скалы</label
-            >
+              for="red-rocks">
+                <input class="visually-hidden" type="checkbox" id="red-rocks" name="red-rocks" />
+                <span class="review__control-mark review__control-mark--checkbox"></span>
+                <span class="review__input-label">Красные скалы </span>
+              </label>
+            </div>
           </fieldset>
           <fieldset class="review__fieldset review__fieldset--emotions">
             <h3 class="review__title review__title--emotions">
@@ -269,5 +281,7 @@
         </a>
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

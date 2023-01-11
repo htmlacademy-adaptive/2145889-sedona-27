@@ -8,13 +8,19 @@
   display: flex;
   flex-direction: column;
 
+  @media (max-width: @mobile-width-only) {
+    & br {
+      display: none;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     max-width: 458px;
     margin-top: 61px;
     margin-bottom: 58px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     margin-bottom: 66px;
   }
 }
@@ -39,11 +45,19 @@
     font-size: 14px;
     line-height: 21px;
     padding-bottom: 40px;
-    padding-left: 12px;
-    padding-right: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 45px;
   }
 }
 
 .hotel-search__button {
   padding: 16px 49px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
+    padding-top: 18px;
+  }
 }

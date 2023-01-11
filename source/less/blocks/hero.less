@@ -1,25 +1,27 @@
 .hero {
-  background-color: @main-blue;
+  background-color: fade(@main-blue, 50%);
 }
 
 .hero__wrapper {
-  background-image: url("../../img/sedona-intro.png");
-  background-repeat: no-repeat;
-  min-height: 158px;
+  min-height: 158px - 52px;
   display: flex;
   flex-direction: column;
   align-content: center;
   padding-top: 52px;
-  padding-bottom: 68px;
+  background-image: url("../../img/sedona-intro.jpg");
+  background-repeat: no-repeat;
+  background-position: 47% -326px;
 
   @media (min-width: @tablet-width) {
     padding-top: 96px;
-    padding-bottom: 118px;
+    padding-bottom: 88px;
+    background-position: 50% -226px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 102px;
-    padding-bottom: 120px;
+    padding-bottom: 93px;
+    background-position: 50% -214px;
   }
 }
 
