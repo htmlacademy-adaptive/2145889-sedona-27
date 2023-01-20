@@ -10,13 +10,13 @@
 }
 
 //Открывает/закрывает модальное окно
-// .form-modal-container--error {
-//   display: none;
-// }
+.form-modal-container--error {
+  display: none;
+}
 
-// .form-modal-container--success {
-//   display: none;
-// }
+.form-modal-container--success {
+  display: none;
+}
 
 .form-modal-container__content {
   position: relative;
@@ -110,6 +110,16 @@
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @hover-blue;
+  }
+
+  &:active {
+    background-color: @dark-blue;
+    color: fade(#ffffff, 30%);
+  }
 
   &--error {
     padding: 18px 78px 14px 78px;

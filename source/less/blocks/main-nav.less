@@ -15,8 +15,13 @@
   }
 }
 
-.main-nav--opened .main-header__logo {
-  display: none;
+.main-nav--nojs {
+  @media (max-width: @mobile-width-only) {
+    margin-top: 0;
+    margin-bottom: 0;
+    z-index: 5;
+    order: -1;
+  }
 }
 
 .main-nav a {
@@ -177,6 +182,23 @@
 
   .main-nav--closed .main-nav__user-list {
     display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .main-nav__site-list {
+    display: block;
+  }
+
+  .main-nav--nojs .main-nav__user-list {
+    display: block;
   }
 }
 

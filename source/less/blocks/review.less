@@ -58,7 +58,6 @@
     height: 1px;
     width: 100%;
     right: 0;
-    // left: 0;
     top: 0;
     background-color: #e5e5e5;
 
@@ -72,10 +71,6 @@
 
 .review__fieldset--contacts {
   padding-bottom: 37px;
-
-  @media (min-width: @tablet-width) {
-    // padding-left: 20px;
-  }
 
   @media (min-width: @desktop-width) {
     margin-left: 34px;
@@ -136,11 +131,6 @@
 
 .review__fieldset--emotions {
   padding-bottom: 24px;
-
-  @media (min-width: @tablet-width) {
-    // padding-top: 0;
-    // margin-top: 18px;
-  }
 }
 
 .review__textarea {
@@ -192,8 +182,6 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(3, 1fr);
-    // margin-left: 56px;
-    // margin-right: 21px;
   }
 }
 
@@ -229,7 +217,6 @@
 .review__fieldset:nth-child(n + 3) {
   @media (min-width: @tablet-width) {
     grid-column: 1 / -1;
-    // padding-bottom: 28px;
   }
 }
 
@@ -248,12 +235,6 @@
   }
 }
 
-.review__title--full-name {
-  @media (min-width: @desktop-width) {
-    // text-indent: 14px;
-  }
-}
-
 .review__title--contacts {
   @media (min-width: @desktop-width) {
     text-indent: -22px;
@@ -262,16 +243,6 @@
 
 .review__title--impression {
   margin-bottom: 30px;
-
-  @media (min-width: @tablet-width) {
-    // text-indent: -19px;
-    // margin-bottom: 38px;
-  }
-
-  @media (min-width: @desktop-width) {
-    // text-indent: 0;
-    // margin-bottom: 57px;
-  }
 }
 
 .review__title--visited-places {
@@ -284,12 +255,6 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 31px;
     margin-top: 2px;
-  }
-}
-
-.review__title--emotions {
-  @media (min-width: @tablet-width) {
-    // text-indent: -18px;
   }
 }
 
@@ -326,15 +291,9 @@
 }
 
 .review__label--full-name {
-  // padding-left: 20px;
-
   @media (min-width: @tablet-width) {
     margin-right: 44px;
     text-indent: 16px;
-  }
-
-  @media (min-width: @desktop-width) {
-    // margin-right: 30px;
   }
 }
 
@@ -342,10 +301,6 @@
   @media (min-width: @tablet-width) {
     margin-left: 44px;
     text-indent: 16px;
-  }
-
-  @media (min-width: @desktop-width) {
-    // margin-left: 43px;
   }
 }
 
@@ -378,11 +333,6 @@
 .review__label--visited-places:active .review__control-mark {
   background-color: #d5d5d5;
 }
-
-// .review__label--impression:active .review__control-mark::after,
-// .review__label--visited-places:active .review__control-mark::after {
-//   background-color: red;
-// }
 
 .review__label--impression input,
 .review__label--visited-places input {
@@ -437,6 +387,7 @@
   position: absolute;
   width: 46px;
   height: 46px;
+  border-radius: 4px;
   background-color: #f2f2f2;
   left: 0;
   bottom: -10px;
@@ -461,7 +412,6 @@
   background-color: fade(#333333, 30%);
 }
 
-//Надо будет вместо кругов сделать чтобы свг выводилось
 .review__label [type="checkbox"]:checked + .review__control-mark::after {
   position: absolute;
   width: 22px;
