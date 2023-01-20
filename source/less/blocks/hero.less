@@ -3,6 +3,7 @@
 }
 
 .hero__wrapper {
+  position: relative;
   min-height: 158px - 52px;
   display: flex;
   flex-direction: column;
@@ -10,18 +11,41 @@
   padding-top: 52px;
   background-image: url("../../img/sedona-intro.jpg");
   background-repeat: no-repeat;
-  background-position: 47% -326px;
+  background-position: 46% -316px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/divider-mobile.svg");
+    background-repeat: no-repeat;
+    z-index: 1;
+    width: 320px;
+    height: 57px;
+    left: -50%;
+    transform: translateX(50%);
+    bottom: -1px;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 96px;
     padding-bottom: 88px;
     background-position: 50% -226px;
+
+    &::after {
+      background-image: url("../../img/divider-tablet.svg");
+      width: 768px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 102px;
     padding-bottom: 93px;
     background-position: 50% -214px;
+
+    &::after {
+      background-image: url("../../img/divider-desktop.svg");
+      width: 1200px;
+    }
   }
 }
 

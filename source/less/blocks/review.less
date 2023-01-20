@@ -2,16 +2,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px 0 24px 0;
+  padding: 24px 0 20px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 102px 60px 64px 60px;
+    padding: 64px 60px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: @desktop-width) {
-    padding: 67px 120px 64px 120px;
+    padding: 28px 120px 70px 120px;
   }
 }
 
@@ -47,6 +47,11 @@
 .review__fieldset--full-name {
   padding-bottom: 39px;
 
+  @media (min-width: @desktop-width) {
+    margin-right: -15px;
+    padding-bottom: 46px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -58,18 +63,32 @@
     background-color: #e5e5e5;
 
     @media (min-width: @tablet-width) {
-      height: 100%;
+      height: 338px;
+      top: 24px;
       width: 1px;
     }
   }
 }
 
 .review__fieldset--contacts {
-  padding-bottom: 34px;
+  padding-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    // padding-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 34px;
+  }
 }
 
+
 .review__fieldset--impression {
-  padding-bottom: 24px;
+  padding-bottom: 35px;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 58px;
+  }
 }
 
 .review__title--impression,
@@ -104,23 +123,40 @@
 }
 
 .review__fieldset--visited-places {
-  padding-bottom: 24px;
+  padding-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 73px;
+  }
 }
 
 .review__fieldset--emotions {
   padding-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    // padding-top: 0;
+    // margin-top: 18px;
+  }
 }
 
 .review__textarea {
-  padding: 0;
   margin: 0;
   border: none;
   background-color: #f2f2f2;
-  width: 280px;
-  height: 150px;
+  width: 280px - 32px;
+  height: 150px - 32px;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
 
   &::placeholder {
-    padding: 16px;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 26px;
@@ -128,12 +164,14 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 648px;
-    height: 160px;
+    display: block;
+    width: 648px - 32px;
+    height: 160px - 32px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 768px;
+    width: 768px - 32px;
+    margin: 0 auto;
   }
 }
 
@@ -154,18 +192,44 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(3, 1fr);
+    // margin-left: 56px;
+    // margin-right: 21px;
+  }
+}
+
+.review__impression-input-wrapper {
+  @media (min-width: @tablet-width) {
+    padding-top: 10px;
+    padding-left: 36px;
+    padding-right: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 26px;
+    padding-left: 53px;
+    padding-right: 20px;
   }
 }
 
 .review__visited-places-input-wrapper {
+  @media (min-width: @tablet-width) {
+    padding-top: 14px;
+    padding-left: 84px;
+    padding-right: 88px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
+    padding-top: 38px;
+    padding-left: 44px;
+    padding-right: 12px;
   }
 }
 
 .review__fieldset:nth-child(n + 3) {
   @media (min-width: @tablet-width) {
     grid-column: 1 / -1;
+    // padding-bottom: 28px;
   }
 }
 
@@ -178,7 +242,54 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
     margin-bottom: 28px;
+  }
+}
+
+.review__title--full-name {
+  @media (min-width: @desktop-width) {
+    // text-indent: 14px;
+  }
+}
+
+.review__title--contacts {
+  @media (min-width: @desktop-width) {
+    text-indent: -22px;
+  }
+}
+
+.review__title--impression {
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    // text-indent: -19px;
+    // margin-bottom: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    // text-indent: 0;
+    // margin-bottom: 57px;
+  }
+}
+
+.review__title--visited-places {
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 31px;
+    margin-top: 2px;
+  }
+}
+
+.review__title--emotions {
+  @media (min-width: @tablet-width) {
+    // text-indent: -18px;
   }
 }
 
@@ -186,6 +297,11 @@
   padding-left: 20px;
   padding-right: 20px;
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .review__label--full-name,
@@ -194,39 +310,79 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  text-indent: 16px;
+  max-width: 280px;
 
   &:not(:last-child) {
     margin-bottom: 16px;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 430px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    text-indent: 17px;
+  }
 }
 
-.review__input--full-name {
+.review__label--full-name {
+  // padding-left: 20px;
+
   @media (min-width: @tablet-width) {
-    margin-right: 23px;
+    margin-right: 44px;
+    text-indent: 16px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 43px;
+    // margin-right: 30px;
   }
 }
 
 .review__label--contacts {
   @media (min-width: @tablet-width) {
-    margin-left: 23px;
+    margin-left: 44px;
+    text-indent: 16px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 43px;
+    // margin-left: 43px;
   }
 }
 
 .review__label--impression,
 .review__label--visited-places {
+  cursor: pointer;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
 }
+
+.review__label--impression {
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+  }
+}
+
+.review__label--visited-places:last-child {
+  @media (min-width: @desktop-width) {
+    margin-left: -17px;
+  }
+}
+
+.review__label--impression:hover .review__control-mark,
+.review__label--visited-places:hover .review__control-mark {
+  background-color: #e5e5e5;
+}
+
+.review__label--impression:active .review__control-mark,
+.review__label--visited-places:active .review__control-mark {
+  background-color: #d5d5d5;
+}
+
+// .review__label--impression:active .review__control-mark::after,
+// .review__label--visited-places:active .review__control-mark::after {
+//   background-color: red;
+// }
 
 .review__label--impression input,
 .review__label--visited-places input {
@@ -238,13 +394,43 @@
   background-color: #f2f2f2;
   border: none;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   padding: 16px;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: #e5e5e5;
+  }
+
+  &:active {
+    background-color: #ffffff;
+    outline: solid 4px #e5e5e5;
+    outline-offset: -4px;
+  }
+}
+
+.review__input--tel {
+  background-image: url("../../img/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 16px + 58px;
+}
+
+.review__input--mail {
+  background-image: url("../../img/mail-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 16px + 58px;
 }
 
 .review__input-label {
-  margin-left: 16px + 23px;
+  margin-left: 42px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 62px;
+  }
 }
 
 .review__control-mark {
@@ -271,46 +457,72 @@
   content: "";
 }
 
+.review__label [type="radio"]:checked:active + .review__control-mark::after {
+  background-color: fade(#333333, 30%);
+}
+
 //Надо будет вместо кругов сделать чтобы свг выводилось
 .review__label [type="checkbox"]:checked + .review__control-mark::after {
   position: absolute;
-  width: 16px;
+  width: 22px;
   height: 16px;
-  border-radius: 50%;
-  left: 15px;
+  left: 12px;
   top: 15px;
   background-color: #333333;
   content: "";
+  mask-image: url("../../img/check-mark.svg");
 }
 
+.review__label [type="checkbox"]:checked:active + .review__control-mark::after {
+  background-color: fade(#333333, 30%);
+}
 
 .review__button {
-  padding: 16px 49px;
-  margin: 0;
-  margin-top: 56px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin: 27px 20px 0 20px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @hover-blue;
+  }
+
+  &:active {
+    background-color: @dark-blue;
+    color: fade(#ffffff, 30%);
+  }
 
   @media (min-width: @tablet-width) {
-    margin-top: 48px;
-    padding: 16px 71px;
+    margin: 24px 0 6px 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 16px 101px;
-    width: 384px;
-    margin-left: auto;
+    margin: 24px 0 0 96px;
   }
 }
 
 .review__info {
+  text-transform: uppercase;
   padding: 0;
   margin: 0;
-  margin-top: 3px;
+  margin-top: 2px;
+  margin-right: 21px;
   text-align: right;
   font-size: 12px;
   line-height: 21px;
   color: rgba(51, 51, 51, 0.6);
 
   @media (min-width: @tablet-width) {
-    margin-top: 71px;
+    font-size: 14px;
+    margin-top: 44px;
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 96px;
   }
 }

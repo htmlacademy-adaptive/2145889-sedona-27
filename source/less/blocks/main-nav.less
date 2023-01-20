@@ -15,6 +15,10 @@
   }
 }
 
+.main-nav--opened .main-header__logo {
+  display: none;
+}
+
 .main-nav a {
   display: block;
   color: #ffffff;
@@ -35,6 +39,7 @@
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 21px;
+    padding-top: 19px;
     color: #000000;
   }
 }
@@ -44,6 +49,7 @@
   @media (max-width: @mobile-width-only) {
     border-bottom: 1px solid fade(#000000, 20%);
     border-top: 1px solid fade(#ffffff, 20%);
+    border-top-style: inset;
   }
 }
 
@@ -69,9 +75,28 @@
   }
 }
 
+.main-nav__item a {
+  @media (min-width: @tablet-width) {
+    &:hover {
+      color: @main-blue;
+    }
+
+    &:active {
+      color: #b3b3b3;
+    }
+  }
+}
 
 .main-nav__item--current a {
   color: #766357;
+
+  &:hover {
+    color: #766357;
+  }
+
+  &:active {
+    color: #766357;
+  }
 }
 
 //Кнопка
