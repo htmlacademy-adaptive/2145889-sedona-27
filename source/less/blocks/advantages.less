@@ -87,11 +87,11 @@
   margin: 0;
 }
 
-.advantages__item--secondary .advantages__title--road {
-  @media (min-width: @tablet-width) {
-    margin-top: -10px;
-  }
-}
+// .advantages__item--secondary .advantages__title--road {
+//   @media (min-width: @tablet-width) {
+//     margin-top: -10px;
+//   }
+// }
 
 .advantages__title--devil-bridge {
   margin: 0;
@@ -148,7 +148,7 @@
 
 .advantages__item--primary {
   background-color: @main-blue;
-  color: #ffffff;
+  color: @advantages-primary-text;
 }
 
 .advantages__item--primary .advantages__title {
@@ -179,6 +179,12 @@
   }
 }
 
+.advantages__item--road {
+  @media (min-width: @tablet-width) {
+    padding-top: 42px;
+  }
+}
+
 .advantages__text-wrapper {
   position: relative;
   display: flex;
@@ -190,21 +196,18 @@
     }
     padding-left: 8px;
     padding-right: 8px;
-
-    &::after {
-      position: absolute;
-      content: "";
-      height: 1px;
-      width: 100%;
-      bottom: -24px;
-      right: 0;
-      left: 0;
-      background-color: #d6d6d6;
-    }
   }
 }
 
-//Убирает разделитель у последнего элемента
-.advantages__item:last-child .advantages__text-wrapper::after {
-  height: 0;
+.advantages__item:not(:last-child) .advantages__text-wrapper::after {
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    bottom: -24px;
+    right: 0;
+    left: 0;
+    background-color: @advantages-mobile-divider;
+  }
 }

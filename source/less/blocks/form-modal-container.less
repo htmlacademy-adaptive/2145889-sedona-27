@@ -39,7 +39,7 @@
   }
 
   &--success {
-    padding-top: 36px;
+    padding-top: 38px;
     height: 319px - 36px;
     width: 319px;
 
@@ -131,20 +131,24 @@
   }
 
   &--success {
-    padding: 18px 76px 14px 76px;
-    margin-top: 46px;
-    box-shadow: 0 0 0 20px #f2f2f2;
+    padding: 18px 75px 14px 75px;
+    max-width: 280px;
 
     @media (min-width: @tablet-width) {
       font-size: 21px;
-      margin-top: 42px;
       padding: 18px 154px 14px 154px;
-      box-sizing: border-box;
-      width: 600px;
-      border-top: solid #f2f2f2 24px;
-      border-bottom: solid #f2f2f2 25px;
-      border-left: solid #f2f2f2 71px;
-      border-right: solid #f2f2f2 71px;
+      max-width: 458px;
     }
+  }
+}
+
+.form-modal-container__button-wrapper {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 54px;
+
+  @media (min-width: @tablet-width) {
+    padding: 44px;
+    margin-top: 52px;
   }
 }
