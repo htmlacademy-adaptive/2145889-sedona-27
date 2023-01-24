@@ -16,7 +16,7 @@
           alt="Логотип Седоны."
         />
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -53,79 +53,143 @@
             width="229"
             height="39"
           />
-          <!-- Тут должен быть белый разделитель -->
         </div>
       </section>
       <section class="photo">
         <div class="photo__wrapper">
-          <h2 class="photo__title">Фото и видео</h2>
-          <p class="photo__description">
-            Не можете решиться на путешествие<br />
-            из-за курса? Фотографии помогут вам<br />
-            забыть о политике и экономике.
+          <div class="photo__text-wrapper">
+            <h2 class="photo__title">Фото и видео</h2>
+            <p class="photo__description">
+              Не можете решиться на путешествие
+              из-за курса?<br> Фотографии помогут вам
+              забыть о политике и экономике.
           </p>
+          </div>
           <div class="photo__catalog catalog">
-            <!-- Надо будет обрезать фотографии -->
             <ul class="catalog__list">
               <li class="catalog__card card">
-                <img
-                  class="card__photo"
-                  src="./img/sunny-road.jfif"
-                  alt="Дорога на закате."
-                />
-                <h3 class="card__title">Неродные просторы</h3>
-                <p class="card__author">Автор фото: Борис</p>
-                <p class="card__likes likes">
-                  <button class="likes__button button" type="button">
-                    Нравится
-                  </button>
-                  1350
-                </p>
+                <picture>
+                  <source media="(min-width: 1200px)"
+                  srcset="./img/sunny-road-desktop.jpg 1x,
+                  ./img/sunny-road-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                  srcset="./img/sunny-road-tablet.jpg 1x,
+                  ./img/sunny-road-tablet@2x.jpg 2x">
+                  <img
+                    class="card__photo"
+                    src="./img/sunny-road-mobile.jpg"
+                    srcset="./img/sunny-road-mobile@2x.jpg 2x"
+                    alt="Дорога на закате."
+                  />
+                </picture>
+                <div class="card__info-wrapper">
+                  <div class="card__text-wrapper">
+                    <h3 class="card__title">Неродные просторы</h3>
+                    <p class="card__author">Автор фото: Борис</p>
+                  </div>
+                  <div class="card__likes likes">
+                    <button class="likes__button button" type="button">
+                      <svg class="likes__icon" width="23" height="21">
+                        <use xlink:href="img/sprite.svg#like-icon"></use>
+                      </svg>
+                      <p class="visually-hidden">Нравится</p>
+                    </button>
+                    <span class="likes__counter">1350</span>
+                  </div>
+                </div>
               </li>
               <li class="catalog__card card">
-                <img
-                  class="card__photo"
-                  src="./img/sedona-flora.jfif"
-                  alt="Аризонский кактус."
+                <picture>
+                  <source media="(min-width: 1200px)"
+                  srcset="./img/sedona-flora-desktop.jpg 1x,
+                  ./img/sedona-flora-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                  srcset="./img/sedona-flora-tablet.jpg 1x,
+                  ./img/sedona-flora-tablet@2x.jpg 2x">
+                  <img
+                    class="card__photo"
+                    src="./img/sedona-flora-mobile.jpg"
+                    srcset="./img/sedona-flora-mobile@2x.jpg 2x"
+                    alt="Аризонский кактус."
                 />
-                <h3 class="card__title">Местная растительность</h3>
-                <p class="card__author">Автор фото: Сергей</p>
-                <p class="card__likes likes">
-                  <button class="likes__button button" type="button">
-                    Нравится
-                  </button>
-                  143
-                </p>
+                </picture>
+                <div class="card__info-wrapper">
+                  <div class="card__text-wrapper">
+                    <h3 class="card__title">Местная растительность</h3>
+                    <p class="card__author">Автор фото: Сергей</p>
+                  </div>
+                  <div class="card__likes likes">
+                    <button class="likes__button button" type="button">
+                      <svg class="likes__icon" width="23" height="21">
+                        <use xlink:href="img/sprite.svg#like-icon"></use>
+                      </svg>
+                      <p class="visually-hidden">Нравится</p>
+                    </button>
+                    <span class="likes__counter">143</span>
+                  </div>
+                </div>
               </li>
               <li class="catalog__card card">
-                <img
-                  class="card__photo"
-                  src="./img/north-road.jfif"
-                  alt="Дорога среди деревьев."
-                />
-                <h3 class="card__title">Дорога на Север</h3>
-                <p class="card__author">Автор фото: Петр</p>
-                <p class="card__likes likes">
-                  <button class="likes__button button" type="button">
-                    Нравится
-                  </button>
-                  96
-                </p>
+                <picture>
+                  <source media="(min-width: 1200px)"
+                  srcset="./img/north-road-desktop.jpg 1x,
+                  ./img/north-road-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                  srcset="./img/north-road-tablet.jpg 1x,
+                  ./img/north-road-tablet@2x.jpg 2x">
+                  <img
+                    class="card__photo"
+                    src="./img/north-road-mobile.jpg"
+                    srcset="./img/north-road-mobile@2x.jpg 2x"
+                    alt="Дорога среди деревьев."
+                  />
+                </picture>
+                <div class="card__info-wrapper">
+                  <div class="card__text-wrapper">
+                    <h3 class="card__title">Дорога на Север</h3>
+                    <p class="card__author">Автор фото: Петр</p>
+                  </div>
+                  <div class="card__likes likes">
+                    <button class="likes__button button" type="button">
+                      <svg class="likes__icon" width="23" height="21">
+                        <use xlink:href="img/sprite.svg#like-icon"></use>
+                      </svg>
+                      <p class="visually-hidden">Нравится</p>
+                    </button>
+                    <span class="likes__counter">96</span>
+                  </div>
+                </div>
               </li>
               <li class="catalog__card card">
-                <img
-                  class="card__photo"
-                  src="./img/devil-bridge-catalog.jfif"
-                  alt="Каньон."
+                <picture>
+                  <source media="(min-width: 1200px)"
+                  srcset="./img/catalog-bridge-desktop.jpg 1x,
+                  ./img/catalog-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                  srcset="./img/catalog-bridge-tablet.jpg 1x,
+                  ./img/catalog-bridge-tablet@2x.jpg 2x">
+                  <img
+                    class="card__photo"
+                    src="./img/catalog-bridge-mobile.jpg"
+                    srcset="./img/catalog-bridge-mobile@2x.jpg 2x"
+                    alt="Каньон."
                 />
-                <h3 class="card__title">Мост Дьявола</h3>
-                <p class="card__author">Автор фото: Антон</p>
-                <p class="card__likes likes">
-                  <button class="likes__button button" type="button">
-                    Нравится
-                  </button>
-                  254
-                </p>
+                </picture>
+                <div class="card__info-wrapper">
+                  <div class="card__text-wrapper">
+                    <h3 class="card__title">Мост Дьявола</h3>
+                    <p class="card__author">Автор фото: Антон</p>
+                  </div>
+                  <div class="card__likes likes">
+                    <button class="likes__button button" type="button">
+                      <svg class="likes__icon" width="23" height="21">
+                        <use xlink:href="img/sprite.svg#like-icon"></use>
+                      </svg>
+                      <p class="visually-hidden">Нравится</p>
+                    </button>
+                    <span class="likes__counter">254</span>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -140,16 +204,24 @@
             подорожали в очередной раз!
           </p>
         </div>
-          <!-- Тут img временный, надо будет вставить видео (надо ли будет?) -->
-          <img
-            class="video__presentation"
-            src="./img/video-cover.jfif"
-            alt="Видеопрезентация."
+          <picture>
+            <source media="(min-width: 1200px)"
+            srcset="./img/video-desktop.jpg 1x,
+            ./img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+            srcset="./img/video-tablet.jpg 1x,
+            ./img/video-tablet@2x.jpg 2x">
+            <img
+              class="card__photo"
+              src="./img/video-mobile.jpg"
+              srcset="./img/video-mobile@2x.jpg 2x"
+              alt="Видеопрезентация."
           />
+          </picture>
         </div>
       </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer main-footer--catalog">
       <div class="main-footer__wrapper">
         <a class="main-footer__hashtag" href="#">#VISITSEDONA</a>
         <div class="main-footer__social social">
@@ -157,22 +229,61 @@
             <li class="social__item">
               <a
                 class="social__link social__link--vk"
-                href="https://vk.com/htmlacademy"
-                >Вконтакте
+                href="https://vk.com/htmlacademy">
+                <svg
+                  class="social__logo social__logo--vk"
+                  width="24"
+                  height="14"
+                  viewBox="0 0 24 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M23.45.95c.17-.55 0-.95-.8-.95h-2.62c-.67 0-.98.35-1.14.73
+                    0 0-1.34 3.2-3.23 5.27-.61.6-.89.8-1.22.8-.17 0-.42-.2-.42-.74V.95c0-.66-.18-.95-.74-.95H9.15c-.42 0-.67.3-.67.6
+                    0 .61.95.76 1.05 2.5v3.8c0 .84-.16.99-.5.99-.88 0-3.05-3.21-4.33-6.89-.25-.71-.5-1-1.17-1H.9C.15 0 0 .35 0 .73c0
+                    .68.89 4.07 4.14 8.55C6.32 12.34 9.38 14 12.15 14c1.67 0 1.88-.37 1.88-1v-2.32c0-.73.16-.88.69-.88.38 0
+                    1.05.2 2.61 1.67C19.11 13.22 19.4 14 20.41 14h2.62c.75 0
+                    1.13-.37.91-1.1-.24-.72-1.09-1.77-2.21-3.02-.62-.7-1.54-1.47-1.81-1.86-.4-.49-.28-.7
+                    0-1.14 0 0 3.2-4.43 3.53-5.93Z" fill="#fff"/>
+                </svg>
+              <span class="visually-hidden">Вконтакте.</span>
               </a>
             </li>
             <li class="social__item">
               <a
                 class="social__link social__link--tg"
-                href="https://t.me/htmlacademy"
-                >Телеграмм
+                href="https://t.me/htmlacademy">
+                <svg
+                class="social__logo social__logo--tg"
+                width="22"
+                height="18"
+                viewBox="0 0 22 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                  <path d="m21.44 1.62-3.17 14.95c-.24 1.05-.86 1.31-1.75.82l-4.83-3.56-2.33
+                  2.24c-.25.26-.47.47-.97.47l.35-4.91 8.95-8.09c.39-.35-.09-.54-.6-.2L6.01
+                  10.32 1.26 8.82C.22 8.5.21 7.8 1.48 7.3L20.1.11c.87-.32 1.62.2 1.34 1.51Z"
+                  fill="#fff"/>
+                </svg>
+                <span class="visually-hidden">Телеграмм.</span>
               </a>
             </li>
             <li class="social__item">
               <a
-                class="social__link social__link--tg"
-                href="https://www.youtube.com/user/htmlacademyru"
-                >YouTube
+                class="social__link social__link--yt"
+                href="https://www.youtube.com/user/htmlacademyru">
+                <svg
+                class="social__logo social__logo--yt"
+                width="20"
+                height="14"
+                viewBox="0 0 20 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.18 0H2.81C1.31 0 0 1.3 0
+                2.8v8.3C0 12.7 1.3 14 2.81 14h14.37A2.8 2.8
+                0 0 0 20 11.2V2.8c.1-1.5-1.2-2.8-2.8-2.8ZM7.03
+                10.4V3.6L13.87 7l-6.84 3.4Z" fill="#fff"/>
+              </svg>
+                <span class="visually-hidden">YouTube.</span>
               </a>
             </li>
           </ul>
@@ -202,5 +313,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

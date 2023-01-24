@@ -4,4 +4,43 @@
   list-style-type: none;
   display: flex;
   gap: 6px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
+  }
+}
+
+.social__item {
+  width: 48px;
+  height: 48px;
+  background-color: @main-blue;
+
+  &:hover {
+    background-color: @hover-blue;
+  }
+
+  &:active {
+    background-color: @dark-blue;
+
+    & path {
+      fill: fade(#ffffff, 30%);
+    }
+  }
+}
+
+.social__logo {
+  &--vk {
+    padding: 17px 12px;
+    padding-bottom: 13px;
+  }
+
+  &--tg {
+    padding: 15px 13px;
+    padding-bottom: 11px;
+  }
+
+  &--yt {
+    padding: 17px 14px;
+    padding-bottom: 13px;
+  }
 }

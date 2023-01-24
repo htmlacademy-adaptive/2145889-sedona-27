@@ -16,7 +16,7 @@
           alt="Логотип Седоны."
         />
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -56,7 +56,7 @@
           <!-- Тут должен быть белый разделитель -->
         </div>
       </section>
-      <div class="page-intro__wrapper">
+      <div class="page-intro__text-wrapper">
         <h2 class="page-intro__title">Оставьте свой отзыв</h2>
         <p class="page-intro__slogan">
           Помогите нашим отелям стать лучше! <br />
@@ -81,10 +81,10 @@
                 required
               />
             </label>
-            <label class="review__input review__input--full-name">
+            <label class="review__label review__label--full-name">
               Фамилия*:
               <input
-                class="review__name review__name--full-name"
+                class="review__input review__input--full-name"
                 type="text"
                 placeholder="Пустота"
                 name="surname"
@@ -96,7 +96,7 @@
               <input
                 class="review__input review__input--full-name"
                 type="text"
-                placeholder="Пустота"
+                placeholder="Викторович"
                 name="middle-name"
               />
             </label>
@@ -128,70 +128,82 @@
             <h3 class="review__title review__title--impression">
               Ваше общее впечатление:
             </h3>
-            <input
-              type="radio"
-              name="impression"
-              id="good"
-              value="good"
-              checked
-            />
-            <label class="review__label review__label--impression" for="good"
-              >Скорее положительное</label
-            >
-            <input type="radio" name="impression" id="bad" value="bad" />
-            <label class="review__label review__label--impression" for="bad"
-              >Скорее отрицательное</label
-            >
-            <input
-              type="radio"
-              name="impression"
-              id="dont-know"
-              value="dont-know"
-            />
-            <label
+            <div class="review__impression-input-wrapper">
+              <label class="review__label review__label--impression" for="good">
+                <input
+                class="visually-hidden"
+                type="radio"
+                name="impression"
+                id="good"
+                value="good"
+                checked
+                />
+                <span class="review__control-mark review__control-mark--radio"></span>
+                <span class="review__input-label">Скорее положительное </span>
+              </label>
+              <label class="review__label review__label--impression" for="bad">
+                <input class="visually-hidden" type="radio" name="impression" id="bad" value="bad" />
+                <span class="review__control-mark review__control-mark--radio"></span>
+                <span class="review__input-label">Скорее отрицательное </span>
+              </label>
+              <label
               class="review__label review__label--impression"
-              for="dont-know"
-              >Затрудняюсь ответить</label
-            >
+              for="dont-know">
+                <input
+                class="visually-hidden"
+                type="radio"
+                name="impression"
+                id="dont-know"
+                value="dont-know"/>
+                <span class="review__control-mark review__control-mark--radio"></span>
+                <span class="review__input-label">Затрудняюсь ответить </span>
+              </label>
+            </div>
           </fieldset>
           <fieldset class="review__fieldset review__fieldset--visited-places">
             <h3 class="review__title review__title--visited-places">
-              Посещенные достопримечательности:
+              Посещенные<br> достопримечательности:
             </h3>
-            <input
-              type="checkbox"
-              id="devil-bridge"
-              name="devil-bridge"
-              checked
-            />
-            <label
+            <div class="review__visited-places-input-wrapper">
+              <label
               class="review__label review__label--visited-places"
-              for="devil-bridge"
-              >Мост Дьявола</label
-            >
-            <input
-              type="checkbox"
-              id="bell-mountain"
-              name="bell-mountain"
-              checked
-            />
-            <label
+              for="devil-bridge">
+                <input
+                class="visually-hidden"
+                type="checkbox"
+                id="devil-bridge"
+                name="devil-bridge"
+                checked/>
+                <span class="review__control-mark review__control-mark--checkbox"></span>
+                <span class="review__input-label">Мост Дьявола </span>
+              </label>
+              <label
               class="review__label review__label--visited-places"
-              for="bell-mountain"
-              >Гора-Колокол</label
-            >
-            <input type="checkbox" id="slide-park" name="slide-park" checked />
-            <label
+              for="bell-mountain">
+                <input
+                class="visually-hidden"
+                type="checkbox"
+                id="bell-mountain"
+                name="bell-mountain"
+                checked/>
+                <span class="review__control-mark review__control-mark--checkbox"></span>
+                <span class="review__input-label">Гора-Колокол </span>
+              </label>
+              <label
               class="review__label review__label--visited-places"
-              for="slide-park"
-              >Слайд-парк</label
-            >
-            <input type="checkbox" id="red-rocks" name="red-rocks" />
-            <label
+              for="slide-park">
+                <input class="visually-hidden" type="checkbox" id="slide-park" name="slide-park" checked />
+                <span class="review__control-mark review__control-mark--checkbox"></span>
+                <span class="review__input-label">Слайд-парк </span>
+              </label>
+              <label
               class="review__label review__label--visited-places"
-              for="red-rocks"
-              >Красные скалы</label
-            >
+              for="red-rocks">
+                <input class="visually-hidden" type="checkbox" id="red-rocks" name="red-rocks" />
+                <span class="review__control-mark review__control-mark--checkbox"></span>
+                <span class="review__input-label">Красные скалы </span>
+              </label>
+            </div>
           </fieldset>
           <fieldset class="review__fieldset review__fieldset--emotions">
             <h3 class="review__title review__title--emotions">
@@ -224,22 +236,61 @@
             <li class="social__item">
               <a
                 class="social__link social__link--vk"
-                href="https://vk.com/htmlacademy"
-                >Вконтакте
+                href="https://vk.com/htmlacademy">
+                <svg
+                  class="social__logo social__logo--vk"
+                  width="24"
+                  height="14"
+                  viewBox="0 0 24 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M23.45.95c.17-.55 0-.95-.8-.95h-2.62c-.67 0-.98.35-1.14.73
+                    0 0-1.34 3.2-3.23 5.27-.61.6-.89.8-1.22.8-.17 0-.42-.2-.42-.74V.95c0-.66-.18-.95-.74-.95H9.15c-.42 0-.67.3-.67.6
+                    0 .61.95.76 1.05 2.5v3.8c0 .84-.16.99-.5.99-.88 0-3.05-3.21-4.33-6.89-.25-.71-.5-1-1.17-1H.9C.15 0 0 .35 0 .73c0
+                    .68.89 4.07 4.14 8.55C6.32 12.34 9.38 14 12.15 14c1.67 0 1.88-.37 1.88-1v-2.32c0-.73.16-.88.69-.88.38 0
+                    1.05.2 2.61 1.67C19.11 13.22 19.4 14 20.41 14h2.62c.75 0
+                    1.13-.37.91-1.1-.24-.72-1.09-1.77-2.21-3.02-.62-.7-1.54-1.47-1.81-1.86-.4-.49-.28-.7
+                    0-1.14 0 0 3.2-4.43 3.53-5.93Z" fill="#fff"/>
+                </svg>
+              <span class="visually-hidden">Вконтакте.</span>
               </a>
             </li>
             <li class="social__item">
               <a
                 class="social__link social__link--tg"
-                href="https://t.me/htmlacademy"
-                >Телеграмм
+                href="https://t.me/htmlacademy">
+                <svg
+                class="social__logo social__logo--tg"
+                width="22"
+                height="18"
+                viewBox="0 0 22 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                  <path d="m21.44 1.62-3.17 14.95c-.24 1.05-.86 1.31-1.75.82l-4.83-3.56-2.33
+                  2.24c-.25.26-.47.47-.97.47l.35-4.91 8.95-8.09c.39-.35-.09-.54-.6-.2L6.01
+                  10.32 1.26 8.82C.22 8.5.21 7.8 1.48 7.3L20.1.11c.87-.32 1.62.2 1.34 1.51Z"
+                  fill="#fff"/>
+                </svg>
+                <span class="visually-hidden">Телеграмм.</span>
               </a>
             </li>
             <li class="social__item">
               <a
-                class="social__link social__link--tg"
-                href="https://www.youtube.com/user/htmlacademyru"
-                >YouTube
+                class="social__link social__link--yt"
+                href="https://www.youtube.com/user/htmlacademyru">
+                <svg
+                class="social__logo social__logo--yt"
+                width="20"
+                height="14"
+                viewBox="0 0 20 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.18 0H2.81C1.31 0 0 1.3 0
+                2.8v8.3C0 12.7 1.3 14 2.81 14h14.37A2.8 2.8
+                0 0 0 20 11.2V2.8c.1-1.5-1.2-2.8-2.8-2.8ZM7.03
+                10.4V3.6L13.87 7l-6.84 3.4Z" fill="#fff"/>
+              </svg>
+                <span class="visually-hidden">YouTube.</span>
               </a>
             </li>
           </ul>
@@ -269,5 +320,34 @@
         </a>
       </div>
     </footer>
+    <div class="form-modal-container form-modal-container--error">
+      <div class="form-modal-container__content form-modal-container__content--error">
+        <div class="form-modal-container__text-wrapper">
+          <h2 class="form-modal-container__title form-modal-container__title--error">
+            ЧТО-ТО ПОШЛО<br> НЕ ТАК!
+          </h2>
+          <p class="form-modal-container__description form-modal-container__description--error">
+            Проверьте поля, выделенные красным,<br> скорее всего вы забыли их заполнить
+          </p>
+        </div>
+        <button class="form-modal-container__button form-modal-container__button--error button">ОК</button>
+      </div>
+    </div>
+    <div class="form-modal-container form-modal-container--success">
+      <div class="form-modal-container__content form-modal-container__content--success">
+        <div class="form-modal-container__text-wrapper">
+          <h2 class="form-modal-container__title form-modal-container__title--success">
+            Ваш отзыв отправлен!
+          </h2>
+          <p class="form-modal-container__description form-modal-container__description--success">
+            Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее время мы опубликуем его на сайте.
+          </p>
+        </div>
+        <div class="form-modal-container__button-wrapper">
+        <button class="form-modal-container__button button form-modal-container__button--success">ЗАКРЫТЬ ОКНО</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

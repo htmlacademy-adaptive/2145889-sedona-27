@@ -1,25 +1,51 @@
 .hero {
-  background-color: @main-blue;
+  background-color: fade(@main-blue, 50%);
 }
 
 .hero__wrapper {
-  background-image: url("../../img/sedona-intro.png");
-  background-repeat: no-repeat;
-  min-height: 158px;
+  position: relative;
+  min-height: 106px;
   display: flex;
   flex-direction: column;
   align-content: center;
   padding-top: 52px;
-  padding-bottom: 68px;
+  background-image: url("../../img/sedona-intro.jpg");
+  background-repeat: no-repeat;
+  background-position: 46% -316px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/divider-mobile.svg");
+    background-repeat: no-repeat;
+    z-index: 1;
+    width: 320px;
+    height: 57px;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: -1px;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 96px;
-    padding-bottom: 118px;
+    padding-bottom: 88px;
+    background-position: 50% -226px;
+
+    &::after {
+      background-image: url("../../img/divider-tablet.svg");
+      width: 768px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 102px;
-    padding-bottom: 120px;
+    padding-bottom: 93px;
+    background-position: 50% -214px;
+
+    &::after {
+      background-image: url("../../img/divider-desktop.svg");
+      width: 1200px;
+    }
   }
 }
 

@@ -5,6 +5,30 @@
   align-content: center;
 }
 
+.photo__text-wrapper {
+  padding-top: 38px;
+  padding-bottom: 38px;
+  margin: 0 auto;
+  width: 280px;
+
+  @media (max-width: @mobile-width-only) {
+    & br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 62px;
+    width: 458px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 99px;
+    padding-bottom: 64px;
+  }
+}
+
 .photo__title {
   font-size: 18px;
   line-height: 26px;
@@ -12,15 +36,9 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  padding-top: 30px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
-    padding-top: 66px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 100px;
   }
 }
 
@@ -28,20 +46,16 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  padding-top: 25px;
-  padding-bottom: 17px;
+  padding-top: 24px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 62px;
+    padding-bottom: 20px;
+    padding-top: 32px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 64px;
+    padding-bottom: 24px;
   }
-}
-
-.photo__catalog {
-  padding-top: 24px;
 }
 
 .catalog__list {
@@ -52,21 +66,43 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
-  padding-left: 20px;
-  padding-right: 20px;
+
   padding-bottom: 17px;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-bottom: 58px;
+    padding: 0 60px 56px 60px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(3, 1fr);
-    padding-bottom: 62px;
+    padding: 0 0 60px 0;
+  }
+}
+
+.catalog__card {
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: #e5e5e5;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
   }
 }
 
@@ -74,6 +110,23 @@
   @media (min-width: @tablet-width) {
     grid-column: 1 / -1;
   }
+
+  @media (max-width: @mobile-width-only) {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-color: #e5e5e5;
+    }
+  }
+}
+
+.card__photo {
+  display: block;
 }
 
 .catalog__card:nth-child(1) .card__photo {
@@ -82,20 +135,96 @@
   }
 }
 
+.card__info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 11px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    align-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: fade(#000000, 30%);
+    color: #ffffff;
+  }
+}
+
+.card__text-wrapper {
+  padding-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 22px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 24px;
+  }
+}
+
 .card__title {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.card__photo {
-  display: block;
   padding: 0;
   margin: 0;
-  width: 100%;
-  height: 280px;
+}
+
+.card__author {
+  color: #333333;
+  padding: 0;
+  margin: 0;
+  margin-top: 1px;
+
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+  }
+}
+
+.card__likes {
+  font-weight: 700;
+  padding: 0;
+  display: flex;
+  gap: 14px;
+  margin: 0;
+  margin-bottom: 2px;
+  margin-top: 5px;
 
   @media (min-width: @tablet-width) {
-    height: 267px;
+    align-self: center;
+    padding-right: 20px;
+    gap: 9px;
+  }
+}
+
+.likes__button {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 23px;
+  height: 21px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.likes__icon {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  opacity: 0.3;
+
+  @media (min-width: @desktop-width) {
+    opacity: 1;
+    fill: #ffffff;
   }
 }

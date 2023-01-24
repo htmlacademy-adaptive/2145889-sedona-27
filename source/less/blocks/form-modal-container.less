@@ -1,0 +1,154 @@
+.form-modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: fade(#000000, 30%);
+  z-index: 10;
+}
+
+//Открывает/закрывает модальное окно
+.form-modal-container--error {
+  display: none;
+}
+
+.form-modal-container--success {
+  display: none;
+}
+
+.form-modal-container__content {
+  position: relative;
+  margin: auto;
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  text-align: center;
+  text-transform: uppercase;
+
+  &--error {
+    padding: 49px 42px 0 42px;
+    height: 280px - 49px;
+    width: 320px - 42px - 42px;
+
+    @media (min-width: @tablet-width) {
+      padding: 50px 47px 0 47px;
+      height: 347px - 50px;
+      width: 400px - 47px - 47px;
+    }
+  }
+
+  &--success {
+    padding-top: 38px;
+    height: 319px - 36px;
+    width: 319px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 43px;
+      height: 347px - 53px;
+      width: 640px;
+    }
+  }
+}
+
+.form-modal-container__title {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+
+  &--error {
+    margin-bottom: 26px;
+
+    @media (max-width: @mobile-width-only) {
+      & br {
+        display: none;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+
+  &--success {
+    margin-bottom: 26px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+}
+
+.form-modal-container__description {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 28px;
+
+  &--error {
+    @media (max-width: @mobile-width-only) {
+      & br {
+        display: none;
+      }
+    }
+
+    @media (min-width: @tablet-width) {
+      font-size: 14px;
+      margin-bottom: 48px;
+    }
+  }
+
+  &--success {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+}
+
+.form-modal-container__button {
+  border: none;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @hover-blue;
+  }
+
+  &:active {
+    background-color: @dark-blue;
+    color: fade(#ffffff, 30%);
+  }
+
+  &--error {
+    padding: 18px 78px 14px 78px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 24px;
+      padding: 17px 120px 14px 120px;
+    }
+  }
+
+  &--success {
+    padding: 18px 75px 14px 75px;
+    max-width: 280px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 21px;
+      padding: 18px 154px 14px 154px;
+      max-width: 458px;
+    }
+  }
+}
+
+.form-modal-container__button-wrapper {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 54px;
+
+  @media (min-width: @tablet-width) {
+    padding: 44px;
+    margin-top: 52px;
+  }
+}
