@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <title>Седона: Фото и видео</title>
-    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="stylesheet" href="./css/style.min.css" type="text/css" />
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -204,20 +205,31 @@
             подорожали в очередной раз!
           </p>
         </div>
-          <picture>
-            <source media="(min-width: 1200px)"
-            srcset="./img/video-desktop.jpg 1x,
-            ./img/video-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)"
-            srcset="./img/video-tablet.jpg 1x,
-            ./img/video-tablet@2x.jpg 2x">
-            <img
-              class="card__photo"
-              src="./img/video-mobile.jpg"
-              srcset="./img/video-mobile@2x.jpg 2x"
-              alt="Видеопрезентация."
-          />
-          </picture>
+          <div class="video__player-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)"
+              srcset="./img/video-desktop.jpg 1x,
+              ./img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+              srcset="./img/video-tablet.jpg 1x,
+              ./img/video-tablet@2x.jpg 2x">
+              <img
+                class="card__video"
+                src="./img/video-mobile.jpg"
+                srcset="./img/video-mobile@2x.jpg 2x"
+                alt="Видеопрезентация."
+              />
+            </picture>
+            <svg
+              class="video__player-button"
+              width="48"
+              height="54"
+              viewBox="0 0 48 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+            <path d="M48 27 0 54V0l48 27Z" fill="#fff" fill-opacity=".7"/>
+            </svg>
+          </div>
         </div>
       </section>
     </main>
