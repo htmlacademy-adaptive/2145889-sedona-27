@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" sizes="32x32" href="img/favicon.svg" type="image/svg+xml">
     <title>Седона: форма отзыва</title>
+    <link rel="preload" href="/source/fonts/ptsans.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.min.css" type="text/css" />
   </head>
   <body class="page__body">
@@ -57,15 +58,14 @@
           <!-- Тут должен быть белый разделитель -->
         </div>
       </section>
-      <div class="page-intro__text-wrapper">
-        <h2 class="page-intro__title">Оставьте свой отзыв</h2>
-        <p class="page-intro__slogan">
-          Помогите нашим отелям стать лучше! <br />
-          оставьте отзыв о них, а также о<br />
-          посещенных вами<br />
-          достопримечательностях
-        </p>
-      </div>
+      <section class="page-intro">
+        <div class="page-intro__text-wrapper">
+          <h2 class="page-intro__title">Оставьте свой отзыв</h2>
+          <p class="page-intro__slogan">
+            Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
+          </p>
+        </div>
+      </section>
       <section class="review">
         <form class="review__form" action="https://echo.htmlacademy.ru/">
           <fieldset class="review__fieldset review__fieldset--full-name">

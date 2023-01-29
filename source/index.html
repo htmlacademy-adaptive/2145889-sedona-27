@@ -3,12 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" sizes="32x32" href="img/favicon.svg" type="image/svg+xml">
     <title>HTML Academy: Седона</title>
-    <link rel="preload" href="/source/css/style.min.css" as="style">
-    <link rel="preload" href="/source/js/script.js" as="script">
-    <link rel="preload" href="/source/fonts/ptsans.woff2" as="fonts">
-    <link rel="stylesheet" sizes="32x32" href="./css/style.min.css" type="text/css" />
+    <link rel="preload" href="/source/fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.min.css" type="text/css" />
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -61,9 +59,7 @@
           </div>
           <div class="page-intro__title-wrapper">
             <h2 class="page-intro__title">
-            Седона — небольшой<br />
-            городок в Аризоне,<br />
-            заслуживающий большего!
+            Седона — небольшой городок в Аризоне, заслуживающий большего!
             </h2>
             <p class="page-intro__slogan">
             Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
@@ -83,11 +79,11 @@
             <path fill-rule="evenodd" clip-rule="evenodd" d="M-225 0h384v37L-225 0ZM543 0H159v37L543 0Z" fill="#fff"/>
           </svg>
           <ul class="advantages__list">
-            <li class="advantages__item advantages__item--primary">
+            <li class="advantages__item advantages__item--primary advantages__item--real-town">
               <h3 class="advantages__title">Настоящий<br> городок</h3>
               <span class="advantages__number">— №1 —</span>
               <p class="advantages__description">
-                Седона не аттракцион для туристов,<br> там течет своя жизнь
+                Седона не аттракцион для туристов, там течет своя жизнь
               </p>
             </li>
             <li class="advantages__item advantages__item--image">
@@ -138,7 +134,7 @@
               <h3 class="advantages__title advantages__title--devil-bridge">Там есть<br> мост дьявола</h3>
               <span class="advantages__number">— №2 —</span>
               <p class="advantages__description advantages__description--devil-bridge">
-                Да, по нему можно<br> пройти! Если вы<br> осмелитесь, конечно
+                Да, по нему можно пройти! Если вы осмелитесь, конечно
               </p>
             </li>
             <li class="advantages__item advantages__item--image">
@@ -177,7 +173,7 @@
             </li>
             <li class="advantages__item advantages__item--secondary">
               <div class="advantages__text-wrapper">
-                <h3 class="advantages__title">Мало<br> туристов</h3>
+                <h3 class="advantages__title advantages__title--tourists">Мало<br> туристов</h3>
                 <span class="advantages__number">— №5 —</span>
                 <p class="advantages__description">
                   Большинство едет в гранд каньон и толпится там
@@ -278,7 +274,7 @@
           </ul>
         </div>
         <a
-          class="main-footer__copyright copyright"
+          class="main-footer__copyright copyright copyright--index"
           href="https://htmlacademy.ru/intensive/adaptive"
         >
           <span class="copyright__text">Разработано</span>

@@ -8,6 +8,7 @@ import autoprefixer from 'autoprefixer';
 import browser, { reload } from 'browser-sync';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgo';
+import svgstore from 'gulp-svgstore';
 import {deleteAsync} from 'del';
 import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
@@ -77,6 +78,18 @@ const svg = () => {
     .pipe(gulp.dest('build/img'));
 }
 
+// Sprite
+
+const sprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlineSVG: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+}
+
 // Copy
 
 const copy = (done) => {
@@ -135,6 +148,7 @@ export const build =  gulp.series(
     html,
     scripts,
     svg,
+    sprite,
     createWebp
   )
 );
@@ -150,6 +164,7 @@ export default gulp.series(
     html,
     scripts,
     svg,
+    sprite,
     createWebp
   ),
   gulp.series(
