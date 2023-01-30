@@ -48,14 +48,19 @@
     <main class="main-container">
       <section class="hero">
         <div class="hero__wrapper">
-          <img
-            class="hero__svg-text"
-            src="./img/sedona-hero-text.svg"
-            alt="Седона."
-            width="229"
-            height="39"
-          />
-          <!-- Тут должен быть белый разделитель -->
+          <picture>
+            <source media="(min-width: 1200px)"
+            srcset="./img/sedona-hero-text-desktop.svg">
+            <source media="(min-width: 768px)"
+            srcset="./img/sedona-hero-text-tablet.svg">
+            <img
+              class="hero__svg-text"
+              src="./img/sedona-hero-text.svg"
+              alt="Седона."
+              width="229"
+              height="39"
+            />
+          </picture>
         </div>
       </section>
       <section class="page-intro">
